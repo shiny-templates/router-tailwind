@@ -11,7 +11,8 @@ neiss_ui <- function() {
       column(8,
              selectInput("code", "Product",
                          choices = setNames(products$prod_code, products$title),
-                         width = "100%"
+                         width = "100%",
+                         selectize = FALSE
              )
       ),
       column(2, selectInput("y", "Y axis", c("rate", "count")))
