@@ -26,3 +26,5 @@ Then run the shiny app by `Control + Shift + Enter`
 Native Shiny components (tabsetPanel() for example) still use bootstrap and won't react to tailwind.
 
 Use raw html tags (div, a, tags$footer, etc) where you want tailwind.
+
+![Screenshot of Shiny App](https://raw.githubusercontent.com/shiny-templates/router-tailwind/main/example.PNG)
