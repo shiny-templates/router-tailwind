@@ -1,4 +1,5 @@
-[*Try it out!*](https://router-tailwind.shiny-templates.dev)
+### Try it out! 
+[*https://router-tailwind.shiny-templates.dev*](https://router-tailwind.shiny-templates.dev)
 
 [shiny.router](https://appsilon.github.io/shiny.router) and [shiny.tailwind](https://github.com/kylebutts/shiny.tailwind)
 
