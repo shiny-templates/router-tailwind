@@ -1,6 +1,6 @@
 # Shiny Templates
 
-[router-tailwind](https://github.com/shiny-templates/router-tailwind)
+[*Try it out!*](https://router-tailwind.shiny-templates.dev)
 
 [shiny.router](https://appsilon.github.io/shiny.router) and [shiny.tailwind](https://github.com/kylebutts/shiny.tailwind)
 
@@ -22,4 +22,6 @@ population <- vroom("src/routes/neiss/data/population.tsv", delim = "\t")
 ```
 Then run the shiny app by `Control + Shift + Enter`
 
-<img src="https://github.com/shiny-templates/router-tailwind/images/router-tailwind.PNG" alt=""/>
+# DISCLAIMER
+Native Shiny components (tabsetPanel() for example) still use bootstrap and won't react to tailwind.
+Use raw html tags (div, a, tags$footer, etc) where you wan't tailwind.
