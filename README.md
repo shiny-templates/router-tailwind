@@ -7,7 +7,7 @@
 A basic setup with an organized router, as well as using [Tailwind v3]() in favor of bootstrap.
 
 ```R
-install.packages(c("shiny", "shiny.router", "vroom", "dplyr", "ggplot2", "forcats"))
+install.packages(c("shiny", "shiny.router", "shiny.tailwind", "vroom", "dplyr", "ggplot2", "forcats"))
 ```
 
 Read data:
