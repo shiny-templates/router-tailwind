@@ -3,6 +3,11 @@
 library(dplyr)
 library(ggplot2)
 library(forcats)
+library(vroom)
+
+injuries   <- vroom("routes/neiss/data/injuries.tsv.gz", delim = "\t")
+products   <- vroom("routes/neiss/data/products.tsv", delim = "\t")
+population <- vroom("routes/neiss/data/population.tsv", delim = "\t")
 
 count_top <- function(df, var, n = 5) {
   df %>%

@@ -2,8 +2,6 @@ library(shiny)
 library(shiny.router)
 library(shiny.tailwind)
 
-options(shiny.port = 6969)
-
 source_folder <- function(folder) {
   files <- list.files(folder, recursive = TRUE, full.names = TRUE, pattern = "\\.R$")
   for (f in files) source(f)
@@ -17,7 +15,9 @@ source_folder("routes/other-page")
 addResourcePath("assets", "assets")
 
 ui <- fluidPage(
-  use_tailwind(),
+  tags$script(
+    src = "https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
+  ),
   includeCSS("assets/main.css"),
   
   div(
@@ -40,7 +40,9 @@ ui <- fluidPage(
 server <- function(input, output, session) {
   
   # Router Server registration
-  router_server(root_page = "/")
+  router_server(
+    root_page = "/"
+  )
   
   observe({
     if (get_page() == "neiss") {
@@ -53,4 +55,4 @@ server <- function(input, output, session) {
   })
 }
 
-shinyApp(ui, server)
+shinyApp(ui, server, options = list(host = '0.0.0.0', port = 2424))
