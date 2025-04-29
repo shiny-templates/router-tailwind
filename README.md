@@ -1,13 +1,13 @@
 # Shiny Templates
 
-[router-tailwind](https://github.com/shiny-templates/router-tailwind)
+[*Try it out!*](https://router-tailwind.shiny-templates.dev)
 
 [shiny.router](https://appsilon.github.io/shiny.router) and [shiny.tailwind](https://github.com/kylebutts/shiny.tailwind)
 
 A basic setup with an organized router, as well as using [Tailwind v3]() in favor of bootstrap.
 
 ```R
-install.packages("shiny", "shiny.router", "shiny.tailwind", "vroom", "dplyr", "ggplot2", "forcats")
+install.packages(c("shiny", "shiny.router", "shiny.tailwind", "vroom", "dplyr", "ggplot2", "forcats"))
 ```
 
 Read data:
@@ -22,4 +22,7 @@ population <- vroom("src/routes/neiss/data/population.tsv", delim = "\t")
 ```
 Then run the shiny app by `Control + Shift + Enter`
 
-<img src="https://github.com/shiny-templates/router-tailwind/images/router-tailwind.PNG" alt=""/>
+# DISCLAIMER
+Native Shiny components (tabsetPanel() for example) still use bootstrap and won't react to tailwind.
+
+Use raw html tags (div, a, tags$footer, etc) where you want tailwind.
