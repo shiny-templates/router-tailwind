@@ -1,6 +1,6 @@
 home_ui <- function() {
   fluidPage(
-    # DON'T use tailwind classes with native Shiny components (fluidPage is not a component)
+    # Only some of the native Shiny components work with Tailwind classes, most don't.
     class = "text-center",
     h1(
       "Example Web",
